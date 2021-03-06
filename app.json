@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "HookGIT",
+    "slug": "HookGIT",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "",
+    "splash": {
+      "image": "",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "https://avatars.githubusercontent.com/u/31674845?s=460&u=985325b81da2e3d75c1dd19656b0258ff6da5543&v=4"
+    }
+  }
+}
