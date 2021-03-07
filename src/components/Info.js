@@ -31,10 +31,10 @@ export default class Info extends Component {
         const users = await response.data
 
         if (users.name === null) {
-            this.setState({ nome: "" })
+            this.setState({ nome: users.login })
 
         } else {
-            this.setState({ nome: users.name, })
+            this.setState({ nome: users.name })
         }
 
         if (users.avatar_url === null) {
@@ -65,7 +65,7 @@ export default class Info extends Component {
         }
 
         if (users.blog === "") {
-            this.setState({ link: "Não encontrada" })
+            this.setState({ link: "Não encontrado" })
 
         } else {
             this.setState({ link: users.blog })
@@ -75,6 +75,7 @@ export default class Info extends Component {
             seguindo: users.following,
             seguidores: users.followers,
         })
+        
 
 
     }
@@ -82,6 +83,7 @@ export default class Info extends Component {
 
 
     render() {
+    
 
 
 
@@ -119,6 +121,22 @@ export default class Info extends Component {
                     onPress={this.loadInfo}>
                     <Text style={styles.submitButtonText}> Hookar Usuário </Text>
                 </TouchableOpacity>
+
+                <Text>
+                <TouchableOpacity
+                    style={styles.repo}
+                    >
+                    <Text style={styles.submitButtonText}> Repositórios</Text>
+                </TouchableOpacity>
+                <Text>   </Text>
+
+                <TouchableOpacity
+                    style={styles.repo}
+                    >
+                    <Text style={styles.submitButtonText}> Eventos</Text>
+                </TouchableOpacity>
+                
+                </Text>
             </View>
 
 
@@ -137,6 +155,7 @@ export default class Info extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        marginTop:30,
 
         justifyContent: "center",
         alignItems: "center"
@@ -181,12 +200,19 @@ const styles = StyleSheet.create({
         margin: 15,
         height: 40,
     },
+    repo: {
+        backgroundColor: '#4544',
+        padding: 10,
+        margin: 15,
+        height: 40,
+    },
     submitButtonText: {
         color: 'white'
     },
     input: {
         height: 40,
         marginTop:10,
+       textAlign:'center',
         width: 310,
         backgroundColor:'#9fafafaf',
         borderColor: '#7a297a',
