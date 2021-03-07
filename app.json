@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "HookGIT",
-    "slug": "HookGIT",
+    "name": "hookGitExpress",
+    "slug": "hookGitExpress",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "",
+    "icon": "./assets/icon.png",
     "splash": {
-      "image": "",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,12 +21,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "",
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "https://avatars.githubusercontent.com/u/31674845?s=460&u=985325b81da2e3d75c1dd19656b0258ff6da5543&v=4"
+      "favicon": "./assets/favicon.png"
     }
   }
 }

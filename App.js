@@ -1,33 +1,38 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet,  View } from 'react-native';
+import React, {Component} from 'react';
+import { StyleSheet, TextInput, View, Text, ScrollView} from 'react-native';
+import Info from './src/components/Info'
+import Header from './src/views/header'
 
-import Header from './src/components/header'
-
-import Main from './src/components/main'
-
-import Footer from './src/components/footer'
-
-export default function App() {
-  return (
-    
-    <View style={styles.container}> 
-    
+export default class App extends Component {
+  render(){
+    return (
+      <View style={styles.container}>
      
-      <Header />   
-    
-      <Main/>
-      <Footer />
+        
+       <Header/> 
+       <ScrollView>
+       
+      <Info />
+      </ScrollView>
      
      
-    </View>
     
-  );
+      <StatusBar style="light"/>
+    
+        
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#333"
-},
+    flex:1,
+    backgroundColor: '#333',
+    
+    
+    
+    
+  },
 });
